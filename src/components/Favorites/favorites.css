@@ -1,0 +1,43 @@
+
+
+    .favorites-wrap{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
+        grid-gap: 20px;
+        padding:30px 15px;
+        margin:0 auto;
+    }
+
+
+
+    .empty-favorites-wrap img{
+        width:350px;
+    }
+
+
+    @media (min-width: 576px){
+    favorites-wrap {
+        max-width: 540px;
+    }
+}
+    @media (min-width: 768px){
+        .favorites-wrap {
+            max-width: 720px;
+        }
+
+    }
+
+
+    @media (min-width: 992px){
+        .favorites-wrap {
+            max-width: 960px;
+        }
+    }
+
+ @media (min-width: 1200px){
+    .favorites-wrap {
+         max-width: 1140px;
+    }
+ }
+
+

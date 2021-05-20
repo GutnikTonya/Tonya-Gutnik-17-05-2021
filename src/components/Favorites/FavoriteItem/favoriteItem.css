@@ -1,0 +1,6 @@
+.favorite-wrap{
+    padding: 15px;
+    border:1px solid black;
+    overflow-wrap: break-word;
+    cursor: pointer;
+}

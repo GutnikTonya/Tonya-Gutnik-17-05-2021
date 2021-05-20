@@ -1,0 +1,25 @@
+[
+    {
+       "LocalObservationDateTime":"2021-05-17T20:57:00+03:00",
+       "EpochTime":1621274220,
+       "WeatherText":"Clear",
+       "WeatherIcon":33,
+       "HasPrecipitation":false,
+       "PrecipitationType":null,
+       "IsDayTime":false,
+       "Temperature":{
+          "Metric":{
+             "Value":22.2,
+             "Unit":"C",
+             "UnitType":17
+          },
+          "Imperial":{
+             "Value":72.0,
+             "Unit":"F",
+             "UnitType":18
+          }
+       },
+       "MobileLink":"https://m.accuweather.com/en/gr/athens/182536/current-weather/182536?lang=en-us",
+       "Link":"https://www.accuweather.com/en/gr/athens/182536/current-weather/182536?lang=en-us"
+    }
+ ]
