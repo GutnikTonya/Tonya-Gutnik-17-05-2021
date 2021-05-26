@@ -71,7 +71,7 @@ export const fetchCities = (value) => {
 
 export const fetchGeopositionCityDetails = (value) => {
     return dispatch => {
-         fetch(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${accuweatherdata.accuweather.apikey}&q=${value}`)
+         fetch(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${accuweatherdata.accuweather.apikey}&q=${value}`)
         .then((response) => response.json())
         .then((result) => {
             console.log('Tonya',JSON.stringify(result))
