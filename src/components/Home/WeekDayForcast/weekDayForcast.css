@@ -1,5 +1,9 @@
+
+@import '../../../App.css';
+
+
 .day-forcast-wrap{
     padding: 15px;
-    border:1px solid rgba(0,0,0,.125);
+    border: 1px solid var(--border-color);
     overflow-wrap: break-word;
 }

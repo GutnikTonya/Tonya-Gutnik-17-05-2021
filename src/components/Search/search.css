@@ -1,8 +1,16 @@
+
+@import '../../App.css';
+
 .result-container{
     border-top:none;
 }
 
 
+input.search-field-auto.form-control,input.search-field-auto.form-control:focus{
+  background-color: var(--backgroundColor);
+  color:var(--textColor);
+  border:none;
+}
 
 .auto-wrap {
     position: absolute;
@@ -12,21 +20,33 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #fff;
+    background-color: var(--backgroundColorLight);
   }
   .auto-wrap .autocom-city {
     padding: 10px;
     cursor: pointer;
-    background-color: #fff;
     border-bottom: 1px solid #d4d4d4;
+    background-color: var(--backgrounbackgroundColorLightdColor);
+    color:var(--textColor);
   }
   .auto-wrap .autocom-city:hover {
-    background-color: #e9e9e9;
+    background-color: var(--hover-background);
+    color:var(--textColor)
   }
 
 
+.search .input-group{
+  border:1px solid var(--border-color);
+}
 .search .searchBtn{
   border-radius:0;
+  background-color: var(--primary-btn-background);
+  border:0;
+  border-left:1px solid var(--border-color);
+}
+
+.search .input-group-text{
+  border:0;
 }
 
 
@@ -49,6 +69,7 @@
     background: none;
     font-size: 25px;
     line-height: 1;
+    color:var(--textColor);
 }
 
 
@@ -60,4 +81,10 @@
 
 .emptySearchRes .modal-header{
   border: none;
+}
+
+
+.modal-content{
+  background-color: var(--backgroundColor);
+  color:var(--textColor);
 }

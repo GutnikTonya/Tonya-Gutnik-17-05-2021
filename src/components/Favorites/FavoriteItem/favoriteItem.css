@@ -1,6 +1,20 @@
+@import '../../../App.css';
+
+
 .favorite-wrap{
     padding: 15px;
-    border:1px solid black;
+    border: 1px solid var(--border-color);
+    background-color:var(--backgroundColor);
     overflow-wrap: break-word;
     cursor: pointer;
+}
+
+.favorite-wrap:hover{
+    background-color:var(--backgroundColorLight);
+    transform: translateY(-10px); 
+}
+
+.Error-Fav{
+    width: 40px;
+    height: auto;
 }

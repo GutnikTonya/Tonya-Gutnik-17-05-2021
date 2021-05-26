@@ -1,4 +1,4 @@
-import { SET_CITY_ID,SET_CITY_DETAILS,FETCH_CITIES,FETCH_CITIES_ERROR,UPDATE_INPUT_VALUE,SET_WEEKLY_WEATHER,UPDATE_FAV_DATA} from '../actions/actionsType';
+import { SET_CITY_ID,SET_CITY_DETAILS,FETCH_CITIES,FETCH_CITIES_ERROR,UPDATE_INPUT_VALUE,SET_WEEKLY_WEATHER,UPDATE_FAV_DATA,FETCH_CITY_ID_ERROR,UPDATE_TEMP_UNIT} from '../actions/actionsType';
 
 const initialState = {
   cities:[],
@@ -7,7 +7,10 @@ const initialState = {
   cityDataLoaded:false,
   citiesfetch:false,
   citiesfetchError:false,
-  weeklyForcastArr:[]
+  weeklyForcastArr:[],
+  errorFetchCityID:false,
+  inputVal:'',
+  tempUnit:'Metric'
 };
 
 export default function(state = initialState, action) {
@@ -36,6 +39,11 @@ export default function(state = initialState, action) {
             inputVal:action.inputVal,
           };  
 
+    case UPDATE_TEMP_UNIT:
+      return{
+        ...state,
+        tempUnit:action.unit
+      }
 
     case SET_CITY_ID:
       return {
@@ -45,12 +53,19 @@ export default function(state = initialState, action) {
         inputVal:action.inputVal
       };
 
+      case FETCH_CITY_ID_ERROR:{
+        return{
+          ...state,
+          errorFetchCityID:true
+        }
+      }
+
       case SET_CITY_DETAILS:
         return {
           ...state,
           CiyDetailsFetched:action.CiyDetailsFetched,
           cityIcon:action.cityIcon,
-          degrees:action.degrees,
+          degreesObj:action.degreesObj,
           weatherText:action.weatherText,
           cityDataLoaded:true
         };

@@ -9,7 +9,9 @@ import * as actionHelpers from '../../../helpers.js'
 function FavoriteItem(props) {
   const [cityParams,updateCityParams]=useState('');
   const [path,setPath]=useState('favorites');
-  
+  const{ tempUnit}=props.searchObj;
+
+
   let history = useHistory();
   useEffect(async () => {
     const params = await actionHelpers.getCityDetails(props.id);
@@ -23,18 +25,21 @@ function FavoriteItem(props) {
       cityID:props.id,
       LocalizedName:props.dataFavoriteItem.LocalizedName
     }
-    props.updateFavorites(cityObj);
+    props.setFavoriteParams(cityObj);
     history.push("/home");
   }
   
 
     return (
       <div  className="favorite-wrap" onClick={openFavInHome} >
-            <h5>{props.dataFavoriteItem.LocalizedName}</h5>
-            <p>{cityParams.degrees}C</p>
+        <h5>{props.dataFavoriteItem.LocalizedName}</h5>
+        {!cityParams?<img className="Error-Img" src={`../../assets/cloud-cross.png`}></img> :
+        <div>
+            <p>{cityParams.degreesObj?cityParams.degreesObj[tempUnit].Value:""} {cityParams.degreesObj?cityParams.degreesObj[tempUnit].Unit:""} </p>
             <img src={`../../assets/${cityParams.cityIcon}-s.png`}></img>
             <p>{cityParams.weatherText}</p>
-      
+            </div>
+          }
       </div>
     )
   }
@@ -51,7 +56,7 @@ function FavoriteItem(props) {
 
   const mapDispatchToProps = dispatch=> {
     return{
-      updateFavorites:(cityObj) => dispatch(actionCreator.updateFavorites(cityObj)),
+      setFavoriteParams:(cityObj) => dispatch(actionCreator.setFavoriteParams(cityObj)),
     }
     
   }

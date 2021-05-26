@@ -59,8 +59,8 @@ function Search(props) {
   return (
         <Container className="search">
           <Row className="mt-3">
-            <Col lg="4" xs="1"></Col>
-            <Col lg="4" xs="10">
+            <Col lg="4" sm="3" xs="1"></Col>
+            <Col lg="4" sm="6"  xs="10">
             <InputGroup >
               <FormControl
                 placeholder="Enter city"
@@ -91,7 +91,7 @@ function Search(props) {
             </Card >
           }
           </Col>
-          <Col lg="4" xs="1">
+          <Col lg="4" sm="3" xs="1">
           </Col>
       </Row>
 
@@ -106,7 +106,7 @@ function Search(props) {
         <Modal.Header  closeButton>
         </Modal.Header>
         <Modal.Body>
-          <p><b>Oops!</b></p>
+        <p>Oops!</p>
           <p>No results found, please try again.</p>
           <img classNam="noResulm" src={`../../assets/cloud-cry.gif`}></img>
         </Modal.Body>

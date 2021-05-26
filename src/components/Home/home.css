@@ -1,3 +1,17 @@
+
+@import '../../App.css';
+
+.card-header{
+    border-bottom: 1px solid var(--border-color);
+    background-color:var(--header-background-color) ;
+}
+
+
+.card{
+    background-color: var(--backgroundColor);
+    border: 1px solid var(--border-color);
+}
+
 .chosen-city-wrap{
     text-align:left;
 }
@@ -5,7 +19,7 @@
 
 .chosen-city-wrap>div{
     align-items: center;
-    justify-content: center;
+    justify-content: end;
 }
 
 .chosen-city-wrap .details p{
@@ -20,8 +34,20 @@
     text-align: right;
 }
 
+.add-fav-wrap .btn-outline-danger{
+    border-color:  var(--favorites-btn);
+    color:var(--favorites-btn);
+}
+
+
+.add-fav-wrap .btn-outline-danger:hover,.add-fav-wrap .btn-danger{
+    background-color: var(--favorites-btn);
+    color: white;
+    border-color: 1px solid var(--favorites-btn);
+}
+
 .add-fav-wrap i{
-    color: #dc3545;
+    color:  var(--favorites-btn);
     margin:10px;
     font-size: 20px; 
     -webkit-transition: 0.6s ease-out;
@@ -54,3 +80,54 @@
     }
 
 }
+
+
+
+
+
+/* Degrees BTN Start*/
+
+.checkboxDegrees{
+    opacity: 0;
+	position: absolute;
+}
+
+.degreeModeLabel{
+    cursor:pointer;
+    display: grid;
+    font-size: 17px;
+    font-weight: 100;
+}
+.degree-mode#Metric .degreeModeLabel .celsius{
+    font-weight: 600;
+}
+
+.degree-mode#Imperial  .degreeModeLabel .fahrenheit{
+    font-weight: 600;
+}
+
+
+
+@media only screen and (max-width:575px){
+    .degreeModeLabel{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 6px;
+    }
+}
+ 
+
+
+/* Degrees BTN End*/
+
+
+/*Error Forcast */
+
+.Forcast-Error{
+    margin-top: 48px;
+}
+
+.Forcast-Error img{
+
+    width:90px;
+}
+/**/

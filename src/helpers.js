@@ -50,10 +50,9 @@ export const getCityDetails = (cityID) => {
        .then((result) => {
           return{
                cityIcon:result[0].WeatherIcon,
-               degrees:result[0].Temperature.Metric.Value,
+               degreesObj:result[0].Temperature,
                weatherText:result[0].WeatherText
            }
-           
            
        })
 }
